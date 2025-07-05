@@ -16,7 +16,7 @@ const Body = () => {
   const fetchBusinessData= async ()=>{
     setIsLoading(true);
     try{
-  const response= await axios.post(`${URL_DATA}business-data`,{name,location});
+  const response= await axios.post(`${URL_DATA}/business-data`,{name,location});
   console.log(response);
   const fetchedData=response?.data?.data;
  const updateData = {
