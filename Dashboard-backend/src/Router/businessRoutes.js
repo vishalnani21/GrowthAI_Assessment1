@@ -5,16 +5,19 @@ bussinessRoutes.post("/business-data",async(req,res)=>{
   const { name, location } = req.body;
 
   const result = {
-    googleRating: (Math.random() * 2 + 3).toFixed(1),
-    reviewCount: Math.floor(Math.random() * 200) + 1,
+    rating: (Math.random() * 2 + 3).toFixed(1),
+    reviews: Math.floor(Math.random() * 200) + 1,
     headline: `Top-rated ${name} in ${location} - Book Now!`
   };
 
-  res.json(result);
+  res.json({
+    message:"Data fetched successfully...",
+    data:result
+  });
 });
 
 bussinessRoutes.get('/regenerate-headline', (req, res) => {
-     const { name, location } = req.body;
+     const { name, location } = req.query;
   const headlines = [
    `Top-Rated ${name} in ${location} – Book Now!`,
     `Affordable & Trusted ${name} Services in ${location}`,

@@ -1,7 +1,10 @@
+import Body from "./Components/Body"
 
 
 function App() {
- return(<h1 className="text-3xl font-bold underline">hello</h1>)
+ return(<div className="bg-blue-200">
+ <Body/>
+ </div>)
 }
 
 export default App
