@@ -1,13 +1,13 @@
 const express = require("express");
 require("dotenv").config();
-app.use(express.json());
+
 const cors = require('cors');
 const bussinessRoutes = require("./Router/businessRoutes");
 
 
 const app=express();
 
-
+app.use(express.json());
 app.use(cors({
   origin: 'http://localhost:5173' 
 }));
