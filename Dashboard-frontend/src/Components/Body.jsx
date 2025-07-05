@@ -16,8 +16,10 @@ const Body = () => {
   const fetchBusinessData= async ()=>{
     setIsLoading(true);
     try{
-  const response= await axios.post(`${URL_DATA}/business-data`,{name,location});
-  console.log(response);
+  const response= await axios.post(`${URL_DATA}business-data`,{name,location});
+  //console.log(response);
+  //console.log("API URL", URL_DATA); 
+
   const fetchedData=response?.data?.data;
  const updateData = {
         name,
