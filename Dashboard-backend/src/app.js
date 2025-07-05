@@ -1,9 +1,12 @@
 const express = require("express");
+require("dotenv").config();
+app.use(express.json());
 const cors = require('cors');
 const bussinessRoutes = require("./Router/businessRoutes");
 
 
 const app=express();
+
 
 app.use(cors({
   origin: 'http://localhost:5173' 
@@ -12,6 +15,9 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/",bussinessRoutes);
-app.listen(3000, () => {
-  console.log(`Backend server is running on http://localhost:3000`);
+
+const PORT=process.env.PORT||30000;
+
+app.listen(PORT, () => {
+  console.log(`Backend server is running on http://localhost:${PORT}`);
 });

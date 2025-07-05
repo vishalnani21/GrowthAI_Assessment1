@@ -16,7 +16,7 @@ dist-ssr
 Dashboard-frontend/node_modules/
 Dashboard-backend/node_modules/
 
-
+.env
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
