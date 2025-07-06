@@ -10,7 +10,7 @@ const DisplayBox = () => {
   const[error,setError]=useState("");
   const handleRegenerate = async () => {
     try{
-     const response = await axios.get(`${URL_DATA}regenerate-headline`, {
+     const response = await axios.get(`${URL_DATA}/regenerate-headline`, {
         params: { name, location }
       });
    // console.log(response);
